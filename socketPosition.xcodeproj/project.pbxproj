@@ -16,8 +16,6 @@
 		14021A4826D8F0B30038FE5A /* SocketPositionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14021A4726D8F0B30038FE5A /* SocketPositionManager.swift */; };
 		1492777B26DE117A00CEE350 /* SocketPositionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492777A26DE117A00CEE350 /* SocketPositionController.swift */; };
 		1492777D26DE149200CEE350 /* SocketPositionManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492777C26DE149200CEE350 /* SocketPositionManagerDelegate.swift */; };
-		1492777F26DE154000CEE350 /* SocketPositionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492777E26DE154000CEE350 /* SocketPositionScreen.swift */; };
-		1492778126DE159600CEE350 /* SocketPositionScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492778026DE159600CEE350 /* SocketPositionScreenDelegate.swift */; };
 		1492778726DE412100CEE350 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1492778626DE412100CEE350 /* Main.storyboard */; };
 		67EE6ECDB1B6B2F5531149A1 /* Pods_socketPosition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9AAD5EB695D2CE421C0EB65 /* Pods_socketPosition.framework */; };
 /* End PBXBuildFile section */
@@ -34,8 +32,6 @@
 		14021A4726D8F0B30038FE5A /* SocketPositionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketPositionManager.swift; sourceTree = "<group>"; };
 		1492777A26DE117A00CEE350 /* SocketPositionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketPositionController.swift; sourceTree = "<group>"; };
 		1492777C26DE149200CEE350 /* SocketPositionManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketPositionManagerDelegate.swift; sourceTree = "<group>"; };
-		1492777E26DE154000CEE350 /* SocketPositionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketPositionScreen.swift; sourceTree = "<group>"; };
-		1492778026DE159600CEE350 /* SocketPositionScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketPositionScreenDelegate.swift; sourceTree = "<group>"; };
 		1492778626DE412100CEE350 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		357AC0D20CD639145C9F6D15 /* Pods-socketPosition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socketPosition.debug.xcconfig"; path = "Target Support Files/Pods-socketPosition/Pods-socketPosition.debug.xcconfig"; sourceTree = "<group>"; };
 		A66C65C343BA7BF414AB6066 /* Pods-socketPosition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socketPosition.release.xcconfig"; path = "Target Support Files/Pods-socketPosition/Pods-socketPosition.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +105,6 @@
 		14021A4926D8F0FB0038FE5A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1492777E26DE154000CEE350 /* SocketPositionScreen.swift */,
 				14021A4A26D8F1000038FE5A /* ViewController */,
 			);
 			path = View;
@@ -127,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				1492777C26DE149200CEE350 /* SocketPositionManagerDelegate.swift */,
-				1492778026DE159600CEE350 /* SocketPositionScreenDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -264,14 +258,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				14021A4826D8F0B30038FE5A /* SocketPositionManager.swift in Sources */,
-				1492778126DE159600CEE350 /* SocketPositionScreenDelegate.swift in Sources */,
 				1492777D26DE149200CEE350 /* SocketPositionManagerDelegate.swift in Sources */,
 				14021A4626D8F0820038FE5A /* SocketParser.swift in Sources */,
 				1492777B26DE117A00CEE350 /* SocketPositionController.swift in Sources */,
 				14021A4326D8F0320038FE5A /* SocketPosition.swift in Sources */,
 				14021A2E26D8EFBF0038FE5A /* AppDelegate.swift in Sources */,
 				14021A3026D8EFBF0038FE5A /* SceneDelegate.swift in Sources */,
-				1492777F26DE154000CEE350 /* SocketPositionScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

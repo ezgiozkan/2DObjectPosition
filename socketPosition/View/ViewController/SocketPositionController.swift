@@ -10,17 +10,11 @@ import UIKit
 class SocketPositionController: UIViewController {
 
     //MARK:Properties
-    
-    let screen = SocketPositionScreen()
+    @IBOutlet var element: UIView!
     let socket = SocketPositionManager()
+    
 
     //MARK: Life Cycle
-    
-    override func loadView() {
-        super.loadView()
-        self.view = screen
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,20 +23,47 @@ class SocketPositionController: UIViewController {
         setupDelegates()
     }
     
-
-  
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         socket.stop()
     }
     
+    
+    //MARK: -Interactions
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let location = touches.first?.location(in: self.view) else {return}
+        handle(point: location)
+    
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let location = touches.first?.location(in: self.view) else {return}
+        handle(point: location)
+    }
 
+    //MARK: - Send position to socket
+    
+    func handle(point: CGPoint) {
+        socket.socketChanged(position: point)
+        //position
+        handle(new: point)
+    }
+    
+    //MARK: - Update element on screen
+    
+    func handle(new point: CGPoint) {
+        
+        element.center = point
+    }
+    
+    
     
    //MARK: Setups
     
     func setupDelegates() {
         
-        screen.controller = self
+        
         socket.delegate = self
     }
 
@@ -50,24 +71,15 @@ class SocketPositionController: UIViewController {
 extension SocketPositionController: SocketPositionManagerDelegate {
     
     func didConnect() {
-        screen.didConnect()
+        
     }
     
     func didReceive(point: CGPoint)
     {
-       screen.handle(new: point)
+       handle(new: point)
     }
 }
 
-extension SocketPositionController: SocketPositionScreenDelegate {
-   
-    func didChange(position: CGPoint) {
-        socket.socketChanged(position: position)
-    }
-    
-    
-    
-}
 
 
 
